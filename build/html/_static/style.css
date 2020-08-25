@@ -1,0 +1,24 @@
+.wy-nav-content {
+	max-width: 100% !important;
+	/* max-width: 1200px !important; */
+
+	/* max-width: 1200px !important; */
+	padding: 1.618em 3.236em;
+	height: 100%;
+	/* width: 100%; */
+	margin: auto;
+}
+.wy-side-nav-search{
+	background-color: #00979d;
+}
+
+.wy-nav-top{
+	/* background: #c00; */
+	background: #00979d;	
+}
+
+/* .wy-nav-content {
+	max-width: 1200px !important;
+
+}
+ */
