@@ -1,5 +1,5 @@
 ******************
-LECTURE 6A
+ANALOG OPERATIONS
 ******************
 
 ANALOG INPUTS
@@ -48,10 +48,6 @@ Variable Voltage Divider from LDR
 =================================
 .. image:: ../../_static/images/lecture6A_pg9.JPG
     :align: center
-
-*****************
-LECTURE 6B
-*****************
 
 POTENTIOMETER
 =============

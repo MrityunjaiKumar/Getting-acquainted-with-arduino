@@ -1,5 +1,5 @@
 ****************
-LECTURE 8
+PWM - OPERATIONS
 ****************
 
 Pulse Width Modulation(PWM)

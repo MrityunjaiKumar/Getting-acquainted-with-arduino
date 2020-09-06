@@ -1,5 +1,5 @@
 ************
-LECTURE 3 
+DIGITAL OPERATIONS
 ************
 
 DIGITAL OUTPUTS

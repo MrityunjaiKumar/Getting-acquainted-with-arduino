@@ -1,5 +1,5 @@
 ***************
-LECTURE 1
+INTRODUCTION
 ***************
 
 What is Arduino

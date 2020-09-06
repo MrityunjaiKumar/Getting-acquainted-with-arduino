@@ -1,5 +1,5 @@
 ****************
-LECTURE 4
+DIGITAL INPUTS
 ****************
 
 DIGITAL INPUTS

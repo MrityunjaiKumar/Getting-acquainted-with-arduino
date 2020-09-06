@@ -1,5 +1,5 @@
 ********************
-LECTURE 12
+LCD INTERFACING
 ********************
 
 WHAT IS LCD?

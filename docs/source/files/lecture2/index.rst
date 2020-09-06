@@ -1,5 +1,5 @@
 *********
-LECTURE 2
+INSTALLATION
 *********
 
 Arduino IDE

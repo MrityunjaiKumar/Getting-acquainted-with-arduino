@@ -1,5 +1,5 @@
 *************
-LECTURE 7
+CHARLIEPLEXING
 *************
 
 CHARLIEPLEXING

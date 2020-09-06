@@ -1,5 +1,5 @@
 **********
-LECTURE 10
+BUZZER INTRODUCTION
 **********
 
 Types of Buzzers

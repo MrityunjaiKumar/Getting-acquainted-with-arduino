@@ -1,5 +1,5 @@
 ***********
-LECTURE 9
+INTRODUCTION TO INTERRUPTS
 ***********
 
 INTERRUPTS

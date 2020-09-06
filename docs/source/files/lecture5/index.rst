@@ -1,5 +1,5 @@
 ********************
-LECTURE 5
+INTRODUCTION TO SSD
 ********************
 
 SEVEN SEGMENT DISPLAY(SSD)
