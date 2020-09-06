@@ -1,0 +1,13 @@
+.wy-nav-content {
+    max-width: 100% !important;
+    padding: 1.618em 3.236em;
+    height: 100%;
+    margin: auto;
+}
+.wy-side-nav-search{
+    background-color: #00979d;
+}
+
+.wy-nav-top{
+    background: #00979d;
+}
