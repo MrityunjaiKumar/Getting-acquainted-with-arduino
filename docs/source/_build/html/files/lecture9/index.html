@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LECTURE 9 &mdash; Getting acquinated with Arduino 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../lecture10/index.html" />
+    <link rel="prev" title="LECTURE 8" href="../lecture8/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Getting acquinated with Arduino
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lecture1/index.html">Arduino  Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture2/index.html">LECTURE 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture3/index.html">LECTURE 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture4/index.html">LECTURE 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture5/index.html">LECTURE 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture6/index.html">LECTURE 6.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture6/index.html#lecture-6b">LECTURE 6B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture7/index.html">LECTURE 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture8/index.html">LECTURE 8</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LECTURE 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#interrupts">INTERRUPTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delays-and-millis-usage">DELAYS AND MILLIS USAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">USAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-show-how-interrupt-works">To show how interrupt works</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture1/index.html">Arduino  Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Getting acquinated with Arduino</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>LECTURE 9</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/files/lecture9/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lecture-9">
+<h1>LECTURE 9<a class="headerlink" href="#lecture-9" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="interrupts">
+<h2>INTERRUPTS<a class="headerlink" href="#interrupts" title="Permalink to this headline">¶</a></h2>
+<p>The first parameter to attachInterrupt() is an interrupt number. Normally you should use digitalPinToInterrupt(pin) to translate the actual digital pin to the specific interrupt number. For example, if you connect to pin 3, use digitalPinToInterrupt(3) as the first parameter to attachInterrupt().</p>
+</div>
+<div class="section" id="delays-and-millis-usage">
+<h2>DELAYS AND MILLIS USAGE<a class="headerlink" href="#delays-and-millis-usage" title="Permalink to this headline">¶</a></h2>
+<p>Inside the attached function, delay() won’t work and the value returned by millis() will not increment. Serial data received while in the function may be lost. You should declare as volatile any variables that you modify within the attached function. See the section on ISRs below for more information.</p>
+</div>
+<div class="section" id="usage">
+<h2>USAGE<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Interrupts are useful for making things happen automatically in microcontroller programs, and can help solve timing problems. Good tasks for using an interrupt may include reading a rotary encoder, or monitoring user input.</p>
+</div>
+<div class="section" id="to-show-how-interrupt-works">
+<h2>To show how interrupt works<a class="headerlink" href="#to-show-how-interrupt-works" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture9_pg6.JPG" class="align-center" src="../../_images/lecture9_pg6.JPG" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lecture10/index.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../lecture8/index.html" class="btn btn-neutral float-left" title="LECTURE 8" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sincgrid LLP
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+************
+LECTURE 3 
+************
+
+DIGITAL OUTPUTS
+===============
+.. image:: ../../_static/images/lecture3_pg2.JPG
+    :align: center
+
+VOLTAGE LEVELS
+============
+- **4.5V-5V - HIGH LOGIC LEVEL**
+- **0V-0.5V- LOW LOGIC LEVEL**
+
+WHAT IS AN LED?
+=============
+.. image:: ../../_static/images/lecture3_pg4.JPG
+    :align: center
+
+.. image:: ../../_static/images/lecture3_pg5.JPG
+    :align: center
+
+Resistor Selection
+==================
+.. image:: ../../_static/images/lecture3_pg6.JPG
+    :align: center
+
+EXERCISE
+========
+- To make the LED blink at different rates
+
+HARDWARE
+========
+.. image:: ../../_static/images/lecture3_pg8.JPG
+    :align: center
+
+SOFTWARE
+========
+.. image:: ../../_static/images/lecture3_pg9.JPG
+    :align: center
+

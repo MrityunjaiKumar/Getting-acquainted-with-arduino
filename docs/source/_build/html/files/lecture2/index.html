@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LECTURE 2 &mdash; Getting acquinated with Arduino 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../lecture3/index.html" />
+    <link rel="prev" title="Arduino Tutorials" href="../lecture1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Getting acquinated with Arduino
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lecture1/index.html">Arduino  Tutorials</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LECTURE 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arduino-ide">Arduino IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-windows">Installation (Windows)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-linux">Installation (Linux)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-mac-os-x">Installation (Mac OS X)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interface">User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-tab-and-edit-tab">File Tab and Edit Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sketch-tab-and-tools-tab">Sketch Tab and Tools Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#meaning-of-symbols-verify">Meaning of Symbols-Verify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload">Upload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new">New</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open">Open</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#save">Save</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#serial-monitor">Serial Monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture1/index.html">Arduino  Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Getting acquinated with Arduino</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>LECTURE 2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/files/lecture2/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lecture-2">
+<h1>LECTURE 2<a class="headerlink" href="#lecture-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="arduino-ide">
+<h2>Arduino IDE<a class="headerlink" href="#arduino-ide" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Free and Open-source</strong></p></li>
+<li><p><strong>Easy-to-use</strong></p></li>
+<li><p><strong>Compatible</strong></p></li>
+<li><p><strong>Easy-to-understand</strong></p></li>
+<li><p><strong>Reliable</strong></p></li>
+</ul>
+</div>
+<div class="section" id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To download the Arduino IDE, open url <a class="reference external" href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>.</p></li>
+<li><p>Now select the download file based on your operating system.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg3.JPG" class="align-center" src="../../_images/lecture2_pg3.JPG" />
+<img alt="../../_images/lecture2_pg4.JPG" class="align-center" src="../../_images/lecture2_pg4.JPG" />
+</div>
+<div class="section" id="installation-windows">
+<h2>Installation (Windows)<a class="headerlink" href="#installation-windows" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Now click on the downloaded file to start the installation.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg5.JPG" class="align-center" src="../../_images/lecture2_pg5.JPG" />
+<ul class="simple">
+<li><p>Now accept the license agreement by clicking on I Agree button.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg6.JPG" class="align-center" src="../../_images/lecture2_pg6.JPG" />
+<ul class="simple">
+<li><p>Click on Next to install various components of Arduino IDE Setup.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg7.JPG" class="align-center" src="../../_images/lecture2_pg7.JPG" />
+<ul class="simple">
+<li><p>Now select the directory for installation and click Install button.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg8.JPG" class="align-center" src="../../_images/lecture2_pg8.JPG" />
+<ul class="simple">
+<li><p>The following dialogue box appears, click Close after the installation is completed.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg9.JPG" class="align-center" src="../../_images/lecture2_pg9.JPG" />
+<ul class="simple">
+<li><p>If the drivers are not pre-installed on your desktop, then a series of driver installation dialog box will appear. Click Install to install the necessary drivers.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg10.JPG" class="align-center" src="../../_images/lecture2_pg10.JPG" />
+<ul class="simple">
+<li><p>The installation has been completed.</p></li>
+<li><p>Now click on the desktop icon to start the Arduino IDE.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg11.JPG" class="align-center" src="../../_images/lecture2_pg11.JPG" />
+</div>
+<div class="section" id="installation-linux">
+<h2>Installation (Linux)<a class="headerlink" href="#installation-linux" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Extract the downloaded package.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg12.JPG" class="align-center" src="../../_images/lecture2_pg12.JPG" />
+<ul class="simple">
+<li><p>In the extracted folder, find the install.sh file.</p></li>
+<li><p>Right click on it and chose the Run in Terminal from contextual menu.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg13.JPG" class="align-center" src="../../_images/lecture2_pg13.JPG" />
+<ul class="simple">
+<li><p>If you can’t find the Run in Terminal option from contextual menu, then open Terminal and navigate to the extracted folder</p></li>
+<li><p>Type the command ./install.sh and wait for the process to finish</p></li>
+<li><p>Now, the Arduino IDE has been installed</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg14.JPG" class="align-center" src="../../_images/lecture2_pg14.JPG" />
+<ul class="simple">
+<li><p>It might be the case that you would not be able to upload the sketch because of serial port permission. The corresponding error message is <strong>”Error connecting to Serial Port”</strong></p></li>
+<li><p>To set the permission, open Terminal and type ** ls -l /dev/ttyACM* **</p></li>
+<li><p>The data we need is ‘dialout’(this is the group owner of the file)</p></li>
+<li><p>Now we need to add our user to that group with the help of the following command  <strong>“sudo usermod -a -G dialout &lt;username&gt;”</strong></p></li>
+</ul>
+<img alt="../../_images/lecture2_pg15.JPG" class="align-center" src="../../_images/lecture2_pg15.JPG" />
+</div>
+<div class="section" id="installation-mac-os-x">
+<h2>Installation (Mac OS X)<a class="headerlink" href="#installation-mac-os-x" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Extract the downloaded package.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg16.JPG" class="align-center" src="../../_images/lecture2_pg16.JPG" />
+<ul class="simple">
+<li><p>Copy the Arduino application into the Applications folder or any other location.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg17.JPG" class="align-center" src="../../_images/lecture2_pg17.JPG" />
+<ul class="simple">
+<li><p>The installation has been completed.</p></li>
+<li><p>Now click on the Arduino icon to start the Arduino IDE.</p></li>
+</ul>
+<img alt="../../_images/lecture2_pg18.JPG" class="align-center" src="../../_images/lecture2_pg18.JPG" />
+</div>
+<div class="section" id="user-interface">
+<h2>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg19.JPG" class="align-center" src="../../_images/lecture2_pg19.JPG" />
+</div>
+<div class="section" id="file-tab-and-edit-tab">
+<h2>File Tab and Edit Tab<a class="headerlink" href="#file-tab-and-edit-tab" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg20.JPG" class="align-center" src="../../_images/lecture2_pg20.JPG" />
+</div>
+<div class="section" id="sketch-tab-and-tools-tab">
+<h2>Sketch Tab and Tools Tab<a class="headerlink" href="#sketch-tab-and-tools-tab" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg21.JPG" class="align-center" src="../../_images/lecture2_pg21.JPG" />
+</div>
+<div class="section" id="meaning-of-symbols-verify">
+<h2>Meaning of Symbols-Verify<a class="headerlink" href="#meaning-of-symbols-verify" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg22.JPG" class="align-center" src="../../_images/lecture2_pg22.JPG" />
+</div>
+<div class="section" id="upload">
+<h2>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg23.JPG" class="align-center" src="../../_images/lecture2_pg23.JPG" />
+</div>
+<div class="section" id="new">
+<h2>New<a class="headerlink" href="#new" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg24.JPG" class="align-center" src="../../_images/lecture2_pg24.JPG" />
+</div>
+<div class="section" id="open">
+<h2>Open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg25.JPG" class="align-center" src="../../_images/lecture2_pg25.JPG" />
+</div>
+<div class="section" id="save">
+<h2>Save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg26.JPG" class="align-center" src="../../_images/lecture2_pg26.JPG" />
+</div>
+<div class="section" id="serial-monitor">
+<h2>Serial Monitor<a class="headerlink" href="#serial-monitor" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg27.JPG" class="align-center" src="../../_images/lecture2_pg27.JPG" />
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture2_pg28.JPG" class="align-center" src="../../_images/lecture2_pg28.JPG" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lecture3/index.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../lecture1/index.html" class="btn btn-neutral float-left" title="Arduino Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sincgrid LLP
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

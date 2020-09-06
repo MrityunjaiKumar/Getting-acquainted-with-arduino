@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LECTURE 6A &mdash; Getting acquinated with Arduino 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="LECTURE 7" href="../lecture7/index.html" />
+    <link rel="prev" title="LECTURE 5" href="../lecture5/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Getting acquinated with Arduino
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lecture1/index.html">LECTURE 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture2/index.html">LECTURE 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture3/index.html">LECTURE 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture4/index.html">LECTURE 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture5/index.html">LECTURE 5</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LECTURE 6A</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#analog-inputs">ANALOG INPUTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-are-analog-signals">What are Analog signals?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-are-digital-signals">What are digital signals?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-adc">What is ADC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analog-to-digital-converter-adc">Analog to Digital converter(ADC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#light-dependent-resistor-ldr">Light Dependent Resistor (LDR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable-voltage-divider-from-ldr">Variable Voltage Divider from LDR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#lecture-6b">LECTURE 6B</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#potentiometer">POTENTIOMETER</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#potentiometer-as-a-analog-input">Potentiometer as a Analog Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ntc-thermistors">NTC Thermistors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ntc-as-an-analog-input">NTC as an Analog Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation-keys">NAVIGATION KEYS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">EXERCISE:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware">HARDWARE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software">SOFTWARE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture7/index.html">LECTURE 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture8/index.html">LECTURE 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture9/index.html">LECTURE 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture10/index.html">LECTURE 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture11/index.html">LECTURE 11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture12/index.html">LECTURE 12</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Getting acquinated with Arduino</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>LECTURE 6A</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/files/lecture6/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lecture-6a">
+<h1>LECTURE 6A<a class="headerlink" href="#lecture-6a" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="analog-inputs">
+<h2>ANALOG INPUTS<a class="headerlink" href="#analog-inputs" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6A_pg2.JPG" class="align-center" src="../../_images/lecture6A_pg2.JPG" />
+</div>
+<div class="section" id="what-are-analog-signals">
+<h2>What are Analog signals?<a class="headerlink" href="#what-are-analog-signals" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6A_pg3.JPG" class="align-center" src="../../_images/lecture6A_pg3.JPG" />
+<p>An Analog signal is a time varying signals which can take any value between a specific range and is defined at each point of time.</p>
+</div>
+<div class="section" id="what-are-digital-signals">
+<h2>What are digital signals?<a class="headerlink" href="#what-are-digital-signals" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6A_pg4.JPG" class="align-center" src="../../_images/lecture6A_pg4.JPG" />
+<p>Digital signals are the signals which have a finite set of possible values and they cannot take any other value.</p>
+</div>
+<div class="section" id="what-is-adc">
+<h2>What is ADC?<a class="headerlink" href="#what-is-adc" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6A_pg5.JPG" class="align-center" src="../../_images/lecture6A_pg5.JPG" />
+<p>It stands for <strong>Analog to Digital Converter</strong></p>
+</div>
+<div class="section" id="analog-to-digital-converter-adc">
+<h2>Analog to Digital converter(ADC)<a class="headerlink" href="#analog-to-digital-converter-adc" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6A_pg6.JPG" class="align-center" src="../../_images/lecture6A_pg6.JPG" />
+<p>Way to convert an analog value to a digital value in Arduino</p>
+<blockquote>
+<div><p>5   ——&gt; 1023
+1   ——&gt; 1023 / 5</p>
+<p>3   ——&gt; (1023/5)*3 = 614</p>
+</div></blockquote>
+</div>
+<div class="section" id="light-dependent-resistor-ldr">
+<h2>Light Dependent Resistor (LDR)<a class="headerlink" href="#light-dependent-resistor-ldr" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6A_pg7.JPG" class="align-center" src="../../_images/lecture6A_pg7.JPG" />
+<img alt="../../_images/lecture6A_pg8.JPG" class="align-center" src="../../_images/lecture6A_pg8.JPG" />
+<p>As it’s obvious from the name, LDR or a photoresistor is a resistor which changes its resistance value depending upon the intensity of light which falls on it.</p>
+</div>
+<div class="section" id="variable-voltage-divider-from-ldr">
+<h2>Variable Voltage Divider from LDR<a class="headerlink" href="#variable-voltage-divider-from-ldr" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6A_pg9.JPG" class="align-center" src="../../_images/lecture6A_pg9.JPG" />
+</div>
+</div>
+<div class="section" id="lecture-6b">
+<h1>LECTURE 6B<a class="headerlink" href="#lecture-6b" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="potentiometer">
+<h2>POTENTIOMETER<a class="headerlink" href="#potentiometer" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6B_pg3.JPG" class="align-center" src="../../_images/lecture6B_pg3.JPG" />
+<p>A potentiometer is a three terminal device with which enables us to vary the resistance to make a voltage divider.</p>
+<div class="section" id="potentiometer-as-a-analog-input">
+<h3>Potentiometer as a Analog Input<a class="headerlink" href="#potentiometer-as-a-analog-input" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/lecture6B_pg4.JPG" class="align-center" src="../../_images/lecture6B_pg4.JPG" />
+</div>
+</div>
+<div class="section" id="ntc-thermistors">
+<h2>NTC Thermistors<a class="headerlink" href="#ntc-thermistors" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6B_pg5.JPG" class="align-center" src="../../_images/lecture6B_pg5.JPG" />
+<p>A thermistor is a resistor whose resistance depends upon the temperature of the environment it is kept in. NTC is acronym for “Negative Temperature Coefficient”. Thus, NTC Thermistor is a device whose resistance decreases with increase in temperature.</p>
+<div class="section" id="ntc-as-an-analog-input">
+<h3>NTC as an Analog Input<a class="headerlink" href="#ntc-as-an-analog-input" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/lecture6B_pg6.JPG" class="align-center" src="../../_images/lecture6B_pg6.JPG" />
+</div>
+</div>
+<div class="section" id="navigation-keys">
+<h2>NAVIGATION KEYS<a class="headerlink" href="#navigation-keys" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6B_pg7.JPG" class="align-center" src="../../_images/lecture6B_pg7.JPG" />
+</div>
+<div class="section" id="exercise">
+<h2>EXERCISE:<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To display ADC value from potentiometer on SSD</p></li>
+</ul>
+</div>
+<div class="section" id="hardware">
+<h2>HARDWARE<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6B_pg9.JPG" class="align-center" src="../../_images/lecture6B_pg9.JPG" />
+</div>
+<div class="section" id="software">
+<h2>SOFTWARE<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture6B_pg10.JPG" class="align-center" src="../../_images/lecture6B_pg10.JPG" />
+<img alt="../../_images/lecture6B_pg11.JPG" class="align-center" src="../../_images/lecture6B_pg11.JPG" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lecture7/index.html" class="btn btn-neutral float-right" title="LECTURE 7" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../lecture5/index.html" class="btn btn-neutral float-left" title="LECTURE 5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sincgrid LLP
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
