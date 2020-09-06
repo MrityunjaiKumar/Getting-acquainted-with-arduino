@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>KEYPAD INTERFACING &mdash; Getting acquinated with Arduino 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="LCD INTERFACING" href="../lecture12/index.html" />
+    <link rel="prev" title="BUZZER INTRODUCTION" href="../lecture10/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Getting acquinated with Arduino
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../lecture1/index.html">INTRODUCTION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture2/index.html">INSTALLATION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture3/index.html">DIGITAL OPERATIONS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture4/index.html">DIGITAL INPUTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture5/index.html">INTRODUCTION TO SSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture6/index.html">ANALOG OPERATIONS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture7/index.html">CHARLIEPLEXING</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture8/index.html">PWM - OPERATIONS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture9/index.html">INTRODUCTION TO INTERRUPTS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture10/index.html">BUZZER INTRODUCTION</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">KEYPAD INTERFACING</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#keypad">KEYPAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#high-side-switching">HIGH SIDE SWITCHING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#low-side-switching">LOW SIDE SWITCHING</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keypad-connections">KEYPAD CONNECTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">EXERCISE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware">HARDWARE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software">SOFTWARE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#practise-exercise">Practise Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture12/index.html">LCD INTERFACING</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Getting acquinated with Arduino</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>KEYPAD INTERFACING</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/files/lecture11/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="keypad-interfacing">
+<h1>KEYPAD INTERFACING<a class="headerlink" href="#keypad-interfacing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="keypad">
+<h2>KEYPAD<a class="headerlink" href="#keypad" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture11_pg2.JPG" class="align-center" src="../../_images/lecture11_pg2.JPG" />
+</div>
+<div class="section" id="high-side-switching">
+<h2>HIGH SIDE SWITCHING<a class="headerlink" href="#high-side-switching" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture11_pg3.JPG" class="align-center" src="../../_images/lecture11_pg3.JPG" />
+</div>
+<div class="section" id="low-side-switching">
+<h2>LOW SIDE SWITCHING<a class="headerlink" href="#low-side-switching" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture11_pg4.JPG" class="align-center" src="../../_images/lecture11_pg4.JPG" />
+</div>
+<div class="section" id="keypad-connections">
+<h2>KEYPAD CONNECTIONS<a class="headerlink" href="#keypad-connections" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture11_pg5.JPG" class="align-center" src="../../_images/lecture11_pg5.JPG" />
+</div>
+<div class="section" id="exercise">
+<h2>EXERCISE<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Based on switch array input change the frequency of sound at which the buzzer beeps</p></li>
+</ul>
+</div>
+<div class="section" id="hardware">
+<h2>HARDWARE<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture11_pg7.JPG" class="align-center" src="../../_images/lecture11_pg7.JPG" />
+</div>
+<div class="section" id="software">
+<h2>SOFTWARE<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/lecture11_pg8.JPG" class="align-center" src="../../_images/lecture11_pg8.JPG" />
+<img alt="../../_images/lecture11_pg9.JPG" class="align-center" src="../../_images/lecture11_pg9.JPG" />
+<img alt="../../_images/lecture11_pg10.JPG" class="align-center" src="../../_images/lecture11_pg10.JPG" />
+</div>
+<div class="section" id="practise-exercise">
+<h2>Practise Exercise<a class="headerlink" href="#practise-exercise" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Based on switch array set some tone</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../lecture12/index.html" class="btn btn-neutral float-right" title="LCD INTERFACING" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../lecture10/index.html" class="btn btn-neutral float-left" title="BUZZER INTRODUCTION" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Sincgrid LLP
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

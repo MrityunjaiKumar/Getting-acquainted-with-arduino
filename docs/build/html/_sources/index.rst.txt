@@ -7,11 +7,29 @@
 Getting acquainted with Arduino!
 ################################
 
-Hello World 
+*******************
+ Arduino  Tutorials
+*******************
+.. image:: _static/images/lecture1_pg1.JPG
+    :align: center
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Table of Contents
+
+   files/lecture1/index
+   files/lecture2/index
+   files/lecture3/index
+   files/lecture4/index
+   files/lecture5/index
+   files/lecture6/index
+   files/lecture7/index
+   files/lecture8/index
+   files/lecture9/index
+   files/lecture10/index
+   files/lecture11/index
+   files/lecture12/index
 
 
 ..   files/Get_Started/index

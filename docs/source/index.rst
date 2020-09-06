@@ -10,7 +10,7 @@ Getting acquainted with Arduino!
 *******************
  Arduino  Tutorials
 *******************
-.. image:: ../../_static/images/lecture1_pg1.JPG
+.. image:: _static/images/lecture1_pg1.JPG
     :align: center
 
 
